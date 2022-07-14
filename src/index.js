@@ -13,7 +13,7 @@ const io = socketio(server);
 const port = process.env.PORT || 5000
 const publicDirectoryPath = path.join(__dirname, '../public')
 
-app.use(express.static(publicDirectoryPath))
+app.use(express.static(publicDirectoryPath));
 
 // 23.0347079,72.5630123
 
