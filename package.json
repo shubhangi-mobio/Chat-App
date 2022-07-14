@@ -1,12 +1,11 @@
 {
   "name": "chat-app",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "npm run test",
     "start": "node src/index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon src/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,5 +16,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shubhangi-mobio/chat-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shubhangi-mobio/chat-app/issues"
+  },
+  "homepage": "https://github.com/shubhangi-mobio/chat-app#readme",
+  "description": ""
 }
