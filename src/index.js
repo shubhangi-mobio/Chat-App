@@ -22,10 +22,10 @@ io.on('connection', (socket) => {
       const { error, user } = addUser({ id: socket.id, ...options })
 
       if (error) {
-          return callback(error)
+          return callback(error);
       }
 
-      socket.join(user.room)
+      socket.join(user.room);
 
       socket.emit('message', generateMessage('Admin', 'Welcome!'))
       socket.broadcast.to(user.room).emit('message', generateMessage('Admin', `${user.username} has joined!`))
@@ -34,7 +34,7 @@ io.on('connection', (socket) => {
           users: getUsersInRoom(user.room)
       })
 
-      callback()
+      callback();
   })
 
   socket.on('sendMessage', (message, callback) => {
@@ -42,7 +42,7 @@ io.on('connection', (socket) => {
       const filter = new Filter()
 
       if (filter.isProfane(message)) {
-          return callback('Profanity is not allowed!')
+          return callback('Profanity is not allowed!');
       }
 
       io.to(user.room).emit('message', generateMessage(user.username, message))
